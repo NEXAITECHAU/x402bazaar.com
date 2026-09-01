@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEX Security — Pay-per-call x402 security tools for AI agents</title>
+<meta name="description" content="Six defensive security endpoints as x402 pay-per-call services. URL safety, smart contract risk, wallet approvals, token safety, address labels, threat intel. Free mirrors + $0.001-0.05/call.">
+<meta name="keywords" content="x402 security, AI agent security, smart contract audit, phishing check, wallet safety, threat intelligence, KYA, agent identity, crypto security">
+<meta property="og:title" content="NEX Security — Six x402 defensive endpoints">
+<meta property="og:description" content="Pay-per-call security for AI agents. No API keys. $0.001-0.05/call. Free mirrors for testing.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nexaitechau.github.io/x402bazaar.com/security.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NEX Security",
+  "url": "https://nexaitechau.github.io/x402bazaar.com/security.html",
+  "description": "Six pay-per-call x402 security endpoints for AI agents"
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #07090f;
+    color: #e4e4e7;
+    line-height: 1.5;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header {
+    border-bottom: 1px solid #27272a;
+    padding: 24px 0;
+    background: rgba(7, 9, 15, 0.85);
+    backdrop-filter: blur(8px);
+  }
+  .header-content { display: flex; align-items: center; justify-content: space-between; }
+  .logo {
+    font-size: 22px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ef4444 0%, #f59e0b 50%, #eab308 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .logo-sub { font-size: 12px; color: #71717a; font-weight: 400; }
+  nav a { color: #a1a1aa; text-decoration: none; margin-left: 32px; font-size: 14px; }
+  nav a:hover { color: #e4e4e7; }
+
+  .hero {
+    text-align: center;
+    padding: 80px 0 64px;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(239, 68, 68, 0.15), transparent);
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #fff 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: 19px;
+    color: #a1a1aa;
+    max-width: 720px;
+    margin: 0 auto 16px;
+  }
+  .hero .highlight { color: #fff; font-weight: 600; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .section { padding: 80px 0; }
+  .section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .section .lead {
+    color: #a1a1aa;
+    font-size: 17px;
+    max-width: 720px;
+    margin-bottom: 32px;
+  }
+
+  .endpoints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .endpoint {
+    background: #0c0c0d;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .endpoint:hover {
+    border-color: #f59e0b;
+    transform: translateY(-2px);
+  }
+  .endpoint h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+  }
+  .endpoint .price {
+    display: inline-block;
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+  }
+  .endpoint p {
+    color: #a1a1aa;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .endpoint .input {
+    background: #121829;
+    border: 1px solid #1f2a40;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: #58a6ff;
+    margin-bottom: 12px;
+    overflow-x: auto;
+  }
+  .endpoint .try-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid #f59e0b;
+    color: #f59e0b;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .endpoint .try-link:hover { background: rgba(245, 158, 11, 0.2); }
+
+  .cta-section {
+    padding: 80px 0;
+    background: #0c0c0d;
+    border-top: 1px solid #27272a;
+    text-align: center;
+  }
+  .cta-section h2 { margin-bottom: 16px; }
+  .cta-section p { color: #a1a1aa; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .btn:hover { opacity: 0.9; }
+  .btn.secondary {
+    background: transparent;
+    border: 1px solid #f59e0b;
+    margin-left: 12px;
+  }
+
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid #27272a;
+    color: #71717a;
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: #58a6ff; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div>
+      <div class="logo">🛡️ NEX Security</div>
+      <div class="logo-sub">Pay-per-call security for AI agents</div>
+    </div>
+    <nav>
+      <a href="https://nexaitechau.github.io/x402bazaar.com/">Bazaar</a>
+      <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json">API Manifest</a>
+      <a href="https://github.com/NEXAITECHAU/nex-security-tools">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Six security endpoints.<br>One wallet. No API keys.</h1>
+    <p>Defensive security primitives as <span class="highlight">x402 pay-per-call services</span>. Built for AI agents, security teams, and Web3 wallets. Free mirrors for testing.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">security endpoints</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$0.001</div>
+        <div class="stat-label">cheapest call</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$0.05</div>
+        <div class="stat-label">most expensive</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">to operate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>End-to-end defensive coverage</h2>
+    <p class="lead">From inbound URL to outbound transaction. Each endpoint is independent, stateless, and free to operate (uses public RPCs + DefiLlama + bytecode heuristics).</p>
+
+    <div class="endpoints">
+
+      <div class="endpoint">
+        <h3>/v1/phishing-check</h3>
+        <div class="price">$0.001 / call</div>
+        <p>Heuristic URL safety check — 14 rules covering typosquatting, suspicious TLDs, punycode, IP hostnames, shorteners, non-HTTPS, suspicious keywords.</p>
+        <div class="input">?url=https://google.com</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/phishing-check?url=https://google.com" target="_blank">Try free →</a>
+      </div>
+
+      <div class="endpoint">
+        <h3>/v1/contract-risk</h3>
+        <div class="price">$0.05 / call</div>
+        <p>Smart contract risk grade A-F. Multi-chain (Base/ETH/Op/Arb/Poly/BNB). Direct RPC + DefiLlama + bytecode analysis (SELFDESTRUCT, DELEGATECALL, EIP-1167 proxy).</p>
+        <div class="input">?address=0x...&chain=base</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/contract-risk?address=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&chain=base" target="_blank">Try free →</a>
+      </div>
+
+      <div class="endpoint">
+        <h3>/v1/wallet-approvals</h3>
+        <div class="price">$0.05 / call</div>
+        <p>Scan any wallet for risky ERC-20 approvals. Last 50K blocks (~7 days on Base). Detects unlimited, high-value, and unknown approvals.</p>
+        <div class="input">?address=0x...&chain=base</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/wallet-approvals?address=0x28F3D3fb24D4926BF5C35296c822d2a43D181177&chain=base" target="_blank">Try free →</a>
+      </div>
+
+      <div class="endpoint">
+        <h3>/v1/token-safety</h3>
+        <div class="price">$0.01 / call</div>
+        <p>Token safety check. Detects mint functions, blacklist, pause, fee setters, proxy patterns, very short contracts (honeypot signal). Multi-chain.</p>
+        <div class="input">?token=0x...&chain=base</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/token-safety?token=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&chain=base" target="_blank">Try free →</a>
+      </div>
+
+      <div class="endpoint">
+        <h3>/v1/address-label</h3>
+        <div class="price">$0.005 / call</div>
+        <p>Address label lookup. 30+ known addresses: exchanges (Binance, Coinbase), bridges (Across, Stargate), OFAC-sanctioned (Tornado Cash), famous wallets (Vitalik).</p>
+        <div class="input">?address=0x...</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/address-label?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045" target="_blank">Try free →</a>
+      </div>
+
+      <div class="endpoint">
+        <h3>/v1/hack-feed</h3>
+        <div class="price">$0.001 / call</div>
+        <p>Real-time crypto exploit feed from DefiLlama. 1,251 hacks tracked. Filter by chain, sort by amount, get technique + classification.</p>
+        <div class="input">?max=10&chain=base</div>
+        <a class="try-link" href="https://charm-preparing-avon-ips.trycloudflare.com/v1/free/hack-feed?max=5" target="_blank">Try free →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Why x402 for security?</h2>
+    <p class="lead">Per-call billing. No API keys. No subscriptions. No accounts. Just a wallet and a request.</p>
+    <ul style="color: #a1a1aa; font-size: 16px; max-width: 720px; padding-left: 24px;">
+      <li style="margin-bottom: 12px;"><strong style="color: #fff;">AI agents can call security checks inline</strong> — no human in the loop, no pre-paid credits, no per-key rate limits to manage.</li>
+      <li style="margin-bottom: 12px;"><strong style="color: #fff;">Wallets-as-identity</strong> — the calling wallet is the caller. Onchain accountability by default.</li>
+      <li style="margin-bottom: 12px;"><strong style="color: #fff;">Composable</strong> — pipe endpoints together. Phishing check → URL scan → contract risk → wallet check. Each call pays for itself.</li>
+      <li style="margin-bottom: 12px;"><strong style="color: #fff;">No vendor lock-in</strong> — open protocol, open source, forkable. Run your own instance if you need scale.</li>
+      <li style="margin-bottom: 12px;"><strong style="color: #fff;">Free mirrors for testing</strong> — every endpoint has a no-payment mirror at <code style="background: #0c0c0d; padding: 2px 6px; border-radius: 4px;">/v1/free/&lt;endpoint&gt;</code> rate-limited to 30/min/IP.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Integrate in 60 seconds</h2>
+    <p>No API keys. No signup. Just a wallet with USDC on Base.</p>
+    <a class="btn" href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json" target="_blank">View API Manifest</a>
+    <a class="btn secondary" href="https://github.com/NEXAITECHAU/nex-security-tools" target="_blank">View on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong style="color: #fff;">NEX Agent Co.</strong> · Pay-per-call security for AI agents · 2026</p>
+    <p style="margin-top: 8px;">
+      <a href="https://charm-preparing-avon-ips.trycloudflare.com/">x402 Server</a> ·
+      <a href="https://nexaitechau.github.io/x402bazaar.com/">Bazaar</a> ·
+      <a href="https://github.com/NEXAITECHAU">GitHub</a> ·
+      <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json">API Manifest</a>
+    </p>
+    <p style="margin-top: 12px; font-size: 11px; color: #52525b;">All endpoints are 100% legal defensive security tools. They only analyze URLs/contracts/wallets that you explicitly provide as input. No probing, no scanning, no exfiltration.</p>
+  </div>
+</footer>
+
+</body>
+</html>
