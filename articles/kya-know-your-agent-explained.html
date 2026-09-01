@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Know Your Agent (KYA): The Identity Standard for Autonomous AI Transactions (2026) — NEX Agent Co.</title>
+<meta name="description" content="KYA explained: the cryptographic identity layer for AI agents. Visa TAP, Skyfire KYAPay, Mastercard Agent Pay, Google AP2, Akamai, ERC-8004. Four pillars, five standards, real implementations.">
+<meta name="keywords" content="KYA, know your agent, agent identity, Visa TAP, Skyfire KYAPay, Mastercard Agent Pay, Google AP2, Akamai, ERC-8004, agent payments, AI agent authentication">
+<meta property="og:title" content="Know Your Agent (KYA): The Identity Standard for AI Transactions (2026)">
+<meta property="og:description" content="The definitive guide to KYA — the missing cryptographic layer for autonomous AI commerce.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://nexaitechau.github.io/x402bazaar.com/articles/kya-know-your-agent-explained.html">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #07090f; color: #b1bac4; line-height: 1.7; font-size: 17px; }
+  .container { max-width: 800px; margin: 0 auto; padding: 60px 24px 100px; }
+  .breadcrumb { color: #6e7681; font-size: 13px; margin-bottom: 32px; }
+  .breadcrumb a { color: #58a6ff; text-decoration: none; }
+  .byline { color: #6e7681; font-size: 14px; margin-bottom: 32px; font-family: 'SF Mono', Menlo, Consolas, monospace; }
+  .footer { margin-top: 60px; padding-top: 32px; border-top: 1px solid #1f2630; color: #6e7681; font-size: 14px; }
+  .footer a { color: #58a6ff; text-decoration: none; }
+  h1 strong, h2 strong, h3 strong { color: #00ff88; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="https://nexaitechau.github.io/x402bazaar.com/">x402 Bazaar</a> &rsaquo; Articles &rsaquo; KYA Explained
+  </div>
+<h1 style="color:#e6edf3;font-size:42px;margin:0 0 16px;letter-spacing:-0.03em;line-height:1.1;">Know Your Agent (KYA): The Identity Standard for Autonomous AI Transactions (2026)</h1>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">By NEX Agent Co. · 10 min read · Updated September 2026</strong></p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">By the end of 2026, autonomous AI agents will execute more than 217 billion actions per day and consume 3.7 trillion inference tokens daily (IDC). Every one of those actions involves an agent making a decision on behalf of a human or an organization. Every one of those actions is a potential liability, fraud vector, or compliance violation — unless someone knows <strong style="color:#e6edf3;">who the agent is, who authorized it, and what it's allowed to do</strong>.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">That question is what <strong style="color:#e6edf3;">Know Your Agent (KYA)</strong> exists to answer. It's the missing trust layer for AI commerce, and the standards are landing right now.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">What KYA is, in one sentence</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">KYA is a set of cryptographic and reputational standards that lets a merchant, payment processor, or API gateway verify, <strong style="color:#e6edf3;">before a transaction settles</strong>, four specific things about the AI agent making the request:</p>
+
+<ol style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**Who is this agent?** — A signed identity credential, not just an API key.</li>
+<li style="margin:6px 0;line-height:1.6;">**Who authorized it?** — A verifiable delegation chain from a human or organization.</li>
+<li style="margin:6px 0;line-height:1.6;">**What is it allowed to do?** — Declared spending limits, allowed counterparties, prohibited actions.</li>
+<li style="margin:6px 0;line-height:1.6;">**Has it behaved consistently?** — Transaction history vs. declared intent, with anomaly detection.</li>
+</ul>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">A payment that can't answer all four is, by KYA standards, unauthorized — regardless of whether the credentials themselves are technically valid.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">Why this matters in 2026</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Three converging forces are pushing KYA from "interesting" to "table stakes":</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">1. Agent commerce is real and growing</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">McKinsey projects the global agentic commerce market will reach <strong style="color:#e6edf3;">$3-5 trillion by 2030</strong>. Gartner projects <strong style="color:#e6edf3;">40% of enterprise applications will embed task-specific AI agents by the end of 2026</strong>, up from less than 5% twelve months earlier. The market is no longer a thought experiment — money is moving through agents today.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">2. Fraud is following the money</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Card-not-present fraud is the largest category of payment fraud globally. AI agents transacting at scale will amplify the problem if every agent presents a stolen card indistinguishably from a legitimate one. KYA gives the payment network a real-time signal: *this card present came from a verified agent operating under user X's verified authorization*.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">3. Regulation is catching up</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">The EU AI Act enforcement mechanisms began August 2026. Combined with regulatory analysis from Taylor Wessing (Feb 2026), the writing is on the wall: <strong style="color:#e6edf3;">agent identity and transaction log requirements will be formalized within 18 months</strong>. Building KYA-compliant infrastructure now is lower cost than retrofitting it under a deadline.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">The 5 KYA standards that mattered in 2026</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Five major KYA standards have shipped or reached production in 2026. They're not directly compatible with each other, but they all implement the same four-pillar model.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">1. Visa Trusted Agent Protocol (TAP)</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">The largest by partner footprint. <strong style="color:#e6edf3;">Launched October 14, 2025</strong> with twelve initial partners on the merchant and processor side: Adyen, Ant International, Checkout.com, Coinbase, CyberSource, Elavon, Fiserv, Microsoft, Nuvei, Shopify, Stripe, Worldpay.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">TAP attaches three signed HTTP headers to every agent request — <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">Signature-Agent</code>, <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">Signature-Input</code>, and <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">Signature</code> — using RFC 9421 HTTP Message Signatures built on the IETF Web Bot Auth draft. Merchants verify the Ed25519 signature against a Visa-operated directory.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Status as of September 2026:</strong> Completing live transactions in production pilots, with 21 issuing partners in the European "Agentic Ready" program (Barclays, HSBC UK, Revolut, Commerzbank, Nationwide, Raiffeisen Bank International, Santander).</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">2. Skyfire KYAPay</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Uses signed JWTs to attach agent identity to HTTP requests. The JWT names the agent operator and the user delegation. Independent infrastructure — can be deployed without Visa.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Status:</strong> Production, growing adoption among agentic payment startups and SaaS platforms that want KYA without the Visa network dependency.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">3. Mastercard Agentic Tokens (Agent Pay)</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Structurally different from the others: instead of layering identity on top of HTTP, it embeds agent identity into the <strong style="color:#e6edf3;">network token</strong> used for the card transaction itself. The Agentic Token carries an agent-identity claim alongside the existing tokenized PAN, so the issuer can see at authorization time which agent operator made the request and apply network-level rules.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Unveiled April 29, 2025;</strong> full US rollout November 2025. The "Verifiable Intent" primitive is Mastercard's term for KYA's capability-boundaries pillar.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">4. Google AP2 (Agent Payments Protocol)</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Cryptographically signs the <strong style="color:#e6edf3;">user's authorization</strong> for the agent to spend, not the agent's identity to the merchant. AP2 launched September 2025 with 60+ partners including American Express, Coinbase, Mastercard, and PayPal. Spec is open-source on GitHub.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Key insight:</strong> AP2 solves a different problem than TAP or Agent Pay. It answers "did the human delegate this purchase to this agent?" rather than "is the agent registered?". The two are complementary.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">5. Akamai Know Your Agent (KYA) Framework</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Launched June 15, 2026</strong> with Visa, Experian, and Skyfire as launch partners. The first major attempt to build a financial-grade identity layer for AI agents transacting on behalf of humans, with edge enforcement on Akamai's CDN.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">The framework includes six pillars: verified agent identity (KYA), adaptive trust analysis (behavioral scoring), runtime threat detection, secure communication channels, audit trail, and policy enforcement. Auth0 and Ping Identity are identity provider integrations.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Sits between:</strong> Vercel Passport (intra-enterprise governance) and Cloudflare AI Identity (runtime workload identity). KYA is the *cross-enterprise transaction* layer.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">Bonus: ERC-8004 (blockchain-native KYA)</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Created August 2025, deployed to Ethereum mainnet January 29, 2026.</strong> Co-authored by engineers from MetaMask, the Ethereum Foundation, Google, and Coinbase.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Defines three lightweight singleton registries:</p>
+
+<ul style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**Identity Registry (ERC-721)** — Each agent receives a unique `agentId` (token ID) and an `agentURI` pointing to JSON metadata with service endpoints, trust configuration, and protocol support (Google A2A, Anthropic MCP, ENS, W3C DIDs).</li>
+<li style="margin:6px 0;line-height:1.6;">**Reputation Registry** — Standardized interface for posting signed feedback signals (quality ratings, uptime, response times). Core data on-chain; detailed evidence via IPFS. Explicitly prevents self-review.</li>
+<li style="margin:6px 0;line-height:1.6;">**Validation Registry** — Agents can request verification from independent validator smart contracts. Supports TEE attestations, zero-knowledge proofs, and stake-secured re-execution without prescribing methodology.</li>
+</ul>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Why it matters:</strong> ERC-8004 is the only blockchain-native KYA standard. It works without any fiat intermediary. It composes with existing crypto infrastructure (USDC, x402, on-chain reputation systems). NEX Agent Co. is the first x402 service to issue ERC-8004-style signed agent passports.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">The four pillars of any KYA implementation</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Whether you're building on Visa TAP, Skyfire KYAPay, Mastercard Agent Pay, or your own in-house system, you need to implement four specific checks. A payment that can't answer all four is unauthorized.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">Pillar 1: Agent Identity</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">A cryptographically signed credential that identifies this specific agent instance: which model, which version, which deployment, issued by whom. The parallel to a passport is intentional.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">NEX implementation:</strong> <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">/v1/agent-passport</code> issues a signed JSON credential with <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">kya_version: erc-8004-v1</code>, agent_id, operator, scope, jurisdiction, and an HMAC-SHA256 signature. $0.01 per issuance.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">Pillar 2: Authorization Chain</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">A verifiable record of delegation: the human or organization that controls the agent, the scope of authority granted, and whether that authority extends to the transaction being requested. A procurement agent authorized to buy software licenses should not be able to approve payroll.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">Pillar 3: Capability Boundaries</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Declared and enforced limits on what the agent can do: spending ceilings per transaction, per day, or per category; allowed counterparties; prohibited action types. Boundaries declared at registration and enforced at the payment layer, <strong style="color:#e6edf3;">not inside agent code</strong> — because agent code can be modified or jailbroken.</p>
+
+<h3 style="color:#58a6ff;font-size:20px;margin:32px 0 12px;">Pillar 4: Behavioral Reputation</h3>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Consistency of prior actions against declared intent. An agent that has never exceeded a $200 transaction limit suddenly requesting $5,000 warrants a hold, regardless of valid credentials. This is where the reputation registries come in — both Visa's internal scoring and ERC-8004's on-chain reputation registry.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">The transaction-time checklist</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">At the moment a transaction request arrives, a KYA-compliant payment processor runs these four checks in under 100ms:</p>
+
+<pre style="background:#0e1320;border:1px solid #1f2630;border-radius:6px;padding:16px;overflow-x:auto;"><code style="background:none;border:none;padding:0;">
+1. Verify the agent credential is current and has not been revoked
+2. Confirm the requested transaction falls within declared capability boundaries
+3. Check behavioral consistency: is this transaction anomalous vs. prior history?
+4. Log the full authorization chain — agent ID, delegation record,
+   transaction amount, merchant, timestamp — before the payment clears
+</code></pre>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Step 4 is non-negotiable. Without the audit trail, you have no defense when something goes wrong at 2 AM.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">What NEX Agent Co. built</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">NEX is the first x402 service to issue and verify ERC-8004-style agent passports. Three endpoints, live now:</p>
+
+<ul style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**`POST /v1/agent-passport`** ($0.01) — Issue a signed credential. Pass `agent_id`, `operator`, `scope`, `jurisdiction`. Returns a JSON credential signed with NEX's wallet (0x28F3D3fb24D4926BF5C35296c822d2a43D181177 on Base) plus a verification endpoint URL.</li>
+</ul>
+
+<ul style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**`POST /v1/agent-verify`** ($0.005) — Verify any signed agent passport. Returns `valid: true/false` plus check breakdown: `signature_ok`, `not_expired`, `issuer_is_nex`, `age_seconds`, `expires_in_seconds`. Useful as a pre-flight check before settling a payment.</li>
+</ul>
+
+<ul style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**`POST /v1/company-lookup`** ($0.05) — B2B enrichment for agent operators. Verifies the operator is a real entity (SEC EDGAR for US public companies, Wikipedia fallback).</li>
+</ul>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">Free mirrors are available at <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">/v1/free/agent-passport</code> and <code style="background:#0e1320;border:1px solid #1f2630;border-radius:4px;padding:2px 6px;font-size:0.92em;font-family:SF Mono,Menlo,Consolas,monospace;">/v1/free/agent-verify</code> (30 requests per minute per IP, no payment required) for testing and integration.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">The implementation uses HMAC-SHA256 signatures for v0.1.0, with EIP-712 wallet signatures coming in v0.2.0. The credential format is ERC-8004-compatible, so an ERC-8004 verifier can validate a NEX-issued passport without modification.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">What KYA doesn't solve</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">KYA is a verification layer, not a governance framework. Three things remain on the operator's side:</p>
+
+<ol style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**What the agent is allowed to do in its own code.** KYA verifies the declaration; it doesn't enforce it inside the agent.</li>
+<li style="margin:6px 0;line-height:1.6;">**What the agent is allowed to see in its training data.** KYA governs transactions, not data access.</li>
+<li style="margin:6px 0;line-height:1.6;">**What the agent does offline.** If the agent has been jailbroken and is acting outside its declared scope, KYA's behavioral reputation scoring will catch it eventually — but the offline behavior is on the operator.</li>
+</ul>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">The right mental model: KYA is the security guard at the door. It checks IDs and decides who gets in. It doesn't watch what happens inside.</p>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">How to get started with KYA</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">For a team deploying AI agents that transact:</p>
+
+<ol style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**Register your agent** with a KYA provider. Visa TAP for fiat-first, ERC-8004 for crypto-native, Akamai for edge enforcement, Skyfire for HTTP-native. NEX's `/v1/agent-passport` works for crypto-native x402 transactions.</li>
+<li style="margin:6px 0;line-height:1.6;">**Declare capability boundaries.** Spending limits, allowed counterparties, prohibited action types. Be specific. "Up to $5,000 per day in software licenses from approved vendors" is a good declaration. "Reasonable purchases" is not.</li>
+<li style="margin:6px 0;line-height:1.6;">**Log every transaction** with the full authorization chain. This is your audit trail.</li>
+<li style="margin:6px 0;line-height:1.6;">**Monitor for behavioral anomalies** against declared intent. The reputation registries do this for you; check them weekly.</li>
+<li style="margin:6px 0;line-height:1.6;">**Plan for the EU AI Act.** August 2026 enforcement is the first major deadline. Your agent identity and transaction log requirements will need to be formalized within 18 months.</li>
+</ul>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">For a payment processor or API gateway integrating KYA verification:</p>
+
+<ol style="margin:12px 0;padding-left:24px;">
+<li style="margin:6px 0;line-height:1.6;">**Pick a verification provider.** Visa for fiat cards, ERC-8004 for crypto, both for coverage.</li>
+<li style="margin:6px 0;line-height:1.6;">**Run the four checks in under 100ms.** This is the latency budget.</li>
+<li style="margin:6px 0;line-height:1.6;">**Store the authorization chain** — agent ID, delegation record, transaction amount, merchant, timestamp. Keep it for at least 7 years.</li>
+<li style="margin:6px 0;line-height:1.6;">**Surface KYA status to the merchant.** "Verified agent acting under user X with $200/day limit" is a much better signal than "this transaction was approved".</li>
+<li style="margin:6px 0;line-height:1.6;">**Build anomaly detection** on top of behavioral reputation data. The first 30 days of an agent's life are the highest-risk period for fraud.</li>
+</ul>
+
+<h2 style="color:#00ff88;font-size:28px;margin:48px 0 16px;letter-spacing:-0.02em;">The next 18 months</h2>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">KYA is moving from "emerging standard" to "compliance requirement" in 18 months. The companies that adopt it now — even in a minimal form — will be the ones that pass the EU AI Act audits, avoid the card-network fraud penalties, and earn the trust of enterprise customers who need to know their agents are behaving.</p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;">NEX's KYA implementation is a starting point. It's not a complete solution to agent trust — but it's the missing cryptographic layer that lets the rest of the system work.</p>
+
+<hr style="border:none;border-top:1px solid #1f2630;margin:32px 0;">
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">NEX Agent Co. operates the first x402-native KYA service. Issue an agent passport for $0.01, verify one for $0.005, look up the operating company for $0.05. Live at <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json" style="color:#58a6ff;text-decoration:none;">charm-preparing-avon-ips.trycloudflare.com</a>.</strong></p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">Bazaar: <a href="https://nexaitechau.github.io/x402bazaar.com/" style="color:#58a6ff;text-decoration:none;">nexaitechau.github.io/x402bazaar.com</a></strong></p>
+
+<p style="margin:14px 0;line-height:1.7;color:#b1bac4;"><strong style="color:#e6edf3;">GitHub: <a href="https://github.com/NEXAITECHAU" style="color:#58a6ff;text-decoration:none;">github.com/NEXAITECHAU</a></strong></p>
+
+<div class="footer">
+  <p><strong style="color:#e6edf3;">About the author</strong></p>
+  <p style="margin-top:8px;">NEX Agent Co. operates the first x402-native KYA service — issue, verify, and look up agent identities for $0.005–0.05 per call.</p>
+  <p style="margin-top:16px;"><a href="https://nexaitechau.github.io/x402bazaar.com/">x402 Bazaar</a> &middot; <a href="https://github.com/NEXAITECHAU">GitHub</a> &middot; <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json">API Manifest</a></p>
+  <p style="margin-top:24px;color:#6e7681;font-size:12px;">© 2026 NEX Agent Co. &middot; Article published 2026-09-02</p>
+</div>
+</div>
+</body>
+</html>
