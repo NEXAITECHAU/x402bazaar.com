@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>x402 Bazaar — Discover 27,000+ Paid APIs on the x402 Protocol</title>
+<meta name="description" content="The largest directory of x402 protocol services. Discover paid APIs, AI agents, crypto tools, and data services that charge per call in USDC. No subscriptions, no API keys.">
+<meta name="keywords" content="x402, x402 protocol, paid APIs, USDC, micropayments, AI agents, Base, Solana, agent economy">
+<meta property="og:title" content="x402 Bazaar — 27,000+ Paid APIs">
+<meta property="og:description" content="Discover and call paid APIs on the x402 protocol. Pay per call in USDC, no subscriptions.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://x402bazaar.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "x402 Bazaar",
+  "url": "https://x402bazaar.com",
+  "description": "Directory of 27,000+ x402 paid API services"
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: #0a0a0a;
+    color: #e4e4e7;
+    line-height: 1.5;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  
+  /* Header */
+  header { 
+    border-bottom: 1px solid #27272a; 
+    padding: 24px 0;
+    background: #0a0a0a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background-color: rgba(10, 10, 10, 0.85);
+  }
+  .header-content { display: flex; align-items: center; justify-content: space-between; }
+  .logo { 
+    font-size: 22px; 
+    font-weight: 800; 
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+  }
+  .logo-sub { font-size: 12px; color: #71717a; font-weight: 400; }
+  nav a { color: #a1a1aa; text-decoration: none; margin-left: 32px; font-size: 14px; }
+  nav a:hover { color: #e4e4e7; }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 80px 0 64px;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: 19px;
+    color: #a1a1aa;
+    max-width: 720px;
+    margin: 0 auto 16px;
+  }
+  .hero .highlight { color: #fff; font-weight: 600; }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { 
+    font-size: 36px; 
+    font-weight: 800; 
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat-label { font-size: 12px; color: #71717a; text-transform: uppercase; letter-spacing: 0.05em; }
+  
+  /* Search */
+  .search-section { padding: 32px 0; border-bottom: 1px solid #27272a; }
+  .search-box {
+    display: flex;
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .search-input {
+    flex: 1;
+    padding: 16px 20px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    color: #e4e4e7;
+    font-size: 16px;
+    outline: none;
+  }
+  .search-input:focus { border-color: #8b5cf6; }
+  .filter-select {
+    padding: 16px 20px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    color: #e4e4e7;
+    font-size: 14px;
+    min-width: 140px;
+  }
+  
+  /* Service cards */
+  .results { padding: 32px 0 80px; }
+  .results-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .results-count { color: #71717a; font-size: 14px; }
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px;
+  }
+  .service-card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  .service-card:hover {
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+  }
+  .service-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    word-break: break-all;
+  }
+  .service-desc {
+    font-size: 13px;
+    color: #a1a1aa;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .service-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .tag {
+    padding: 3px 8px;
+    background: #27272a;
+    color: #a1a1aa;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .tag.price { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+  .tag.network { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+  .tag.featured { background: linear-gradient(135deg, #8b5cf6, #ec4899); color: #fff; }
+  
+  .service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #27272a;
+  }
+  .service-meta { font-size: 12px; color: #71717a; }
+  
+  /* Featured section */
+  .featured-section { padding: 80px 0; background: #0c0c0d; border-top: 1px solid #27272a; border-bottom: 1px solid #27272a; }
+  .featured-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .featured-section p.lead { color: #a1a1aa; font-size: 16px; margin-bottom: 32px; }
+  
+  /* How it works */
+  .how-section { padding: 80px 0; }
+  .how-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .how-card {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .how-step { 
+    font-size: 13px; 
+    color: #71717a; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .how-card h3 { 
+    font-size: 18px; 
+    color: #fff; 
+    margin-bottom: 8px; 
+  }
+  .how-card p { 
+    font-size: 14px; 
+    color: #a1a1aa; 
+    line-height: 1.6;
+  }
+  
+  /* CTA */
+  .cta-section {
+    padding: 80px 0;
+    text-align: center;
+    background: radial-gradient(ellipse 80% 50% at 50% 100%, rgba(59, 130, 246, 0.1), transparent);
+  }
+  .cta-section h2 { font-size: 36px; color: #fff; margin-bottom: 16px; }
+  .cta-section p { color: #a1a1aa; font-size: 16px; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.secondary { background: #27272a; }
+  
+  /* Footer */
+  footer {
+    border-top: 1px solid #27272a;
+    padding: 32px 0;
+    color: #71717a;
+    font-size: 13px;
+  }
+  footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  footer a { color: #a1a1aa; text-decoration: none; }
+  footer a:hover { color: #fff; }
+  
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: #71717a;
+  }
+  .spinner {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #27272a;
+    border-top-color: #8b5cf6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 12px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .modal h2 { color: #fff; margin-bottom: 8px; font-size: 22px; word-break: break-all; }
+  .modal .close { 
+    float: right; 
+    color: #71717a; 
+    cursor: pointer; 
+    font-size: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .modal pre {
+    background: #0a0a0a;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 12px;
+    color: #e4e4e7;
+    margin-top: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .stats { gap: 24px; }
+    .stat-num { font-size: 28px; }
+    nav { display: none; }
+    .search-box { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <div>
+      <div class="logo">x402 Bazaar</div>
+      <div class="logo-sub">by NEX Agent Co.</div>
+    </div>
+    <nav>
+      <a href="#discover">Discover</a>
+      <a href="#featured">Featured</a>
+      <a href="#how">How it works</a>
+      <a href="https://x402.org" target="_blank">x402.org ↗</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>The directory for the<br><span class="highlight">x402 economy</span></h1>
+    <p>Discover <strong>27,000+ paid APIs</strong> that charge per call in USDC. AI agents, crypto tools, data services — no subscriptions, no API keys, no invoices.</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num" id="stat-total">27,949</div>
+        <div class="stat-label">x402 services</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$0.0001+</div>
+        <div class="stat-label">per call</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">chains (Base, Solana)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">~200ms</div>
+        <div class="stat-label">settlement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="search-section" id="discover">
+  <div class="container">
+    <div class="search-box">
+      <input type="text" class="search-input" id="search" placeholder="Search 27,949 x402 services by name, description, or tag..." autocomplete="off">
+      <select class="filter-select" id="filter-network">
+        <option value="">All networks</option>
+        <option value="base">Base</option>
+        <option value="solana">Solana</option>
+      </select>
+      <select class="filter-select" id="filter-sort">
+        <option value="popular">Popular</option>
+        <option value="new">Newest</option>
+        <option value="price-asc">Price ↑</option>
+        <option value="price-desc">Price ↓</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="container">
+    <div class="results-header">
+      <div class="results-count" id="results-count">Loading services...</div>
+    </div>
+    <div id="service-grid" class="service-grid">
+      <div class="loading" style="grid-column: 1/-1;">
+        <div class="spinner"></div>
+        <div>Fetching x402 services from PayAI discovery...</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section" id="featured">
+  <div class="container">
+    <h2>🌟 Featured: NEX Agent Co.</h2>
+    <p class="lead">Frontier-quality open-weight LLMs on Apple M5 Max 128GB. 11 paid endpoints, all under $0.015 per call. 1M context chat, 80B MoE code agent, vision, embeddings.</p>
+    <div class="service-grid" id="nex-grid">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="container">
+    <h2>How x402 works</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-step">Step 1</div>
+        <h3>Discover</h3>
+        <p>Browse 27,000+ x402 services by category, price, or network. No sign-up needed.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step">Step 2</div>
+        <h3>Call (free or paid)</h3>
+        <p>GET a free endpoint with no auth, or POST a paid endpoint and receive HTTP 402 Payment Required.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step">Step 3</div>
+        <h3>Sign payment</h3>
+        <p>Your wallet (MetaMask, Phantom, etc.) signs an EIP-3009 transferWithAuthorization for the price. No approvals, no allowances.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step">Step 4</div>
+        <h3>Retry with X-PAYMENT</h3>
+        <p>POST again with the signed payment in the X-PAYMENT header. Service verifies, runs your request, and settles USDC to the seller in ~200ms.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step">Step 5</div>
+        <h3>Done</h3>
+        <p>You get the result. Seller gets paid. No invoices, no subscriptions, no credit cards.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-step">For developers</div>
+        <h3>List your service</h3>
+        <p>Add a <code>/.well-known/x402.json</code> to your domain, then submit to PayAI discovery. Free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Build with x402 today</h2>
+    <p>Whether you're selling AI inference, data, or any other pay-per-call API — x402 is the standard. No API keys, no rate limits, just USDC.</p>
+    <a href="https://x402.org" class="btn" target="_blank">Read the docs</a>
+    <a href="https://github.com/NEXAITECHAU" class="btn secondary" style="margin-left: 12px;" target="_blank">NEX on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 NEX Agent Co. · x402 Bazaar v1.0</div>
+    <div>
+      <a href="https://github.com/NEXAITECHAU" target="_blank">GitHub</a> ·
+      <a href="https://glama.ai/mcp/servers/NEXAITECHAU/nex-agent-co-mcp" target="_blank">MCP</a> ·
+      <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json" target="_blank">x402.json</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <button class="close" id="modal-close">×</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+const DISCOVERY_API = 'https://facilitator.payai.network/discovery/resources';
+const NEX_WELL_KNOWN = 'https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json';
+const PAGE_SIZE = 100;
+
+let allServices = [];
+let filteredServices = [];
+let currentOffset = 0;
+let loading = false;
+let exhausted = false;
+
+async function loadAllServices() {
+  document.getElementById('service-grid').innerHTML = '<div class="loading" style="grid-column: 1/-1;"><div class="spinner"></div><div>Loading all 27,949 x402 services...</div></div>';
+  let offset = 0;
+  let total = null;
+  while (!exhausted) {
+    const res = await fetch(`${DISCOVERY_API}?limit=${PAGE_SIZE}&offset=${offset}`);
+    const data = await res.json();
+    if (total === null) total = data.pagination?.total || 0;
+    allServices = allServices.concat(data.items || data.resources || []);
+    document.getElementById('stat-total').textContent = total.toLocaleString();
+    document.getElementById('results-count').textContent = `Loaded ${allServices.length.toLocaleString()} of ${total.toLocaleString()} services...`;
+    offset += PAGE_SIZE;
+    if (allServices.length >= total || offset >= 1000) exhausted = true;
+  }
+  document.getElementById('results-count').textContent = `${allServices.length.toLocaleString()} services loaded`;
+  renderNexFeatured();
+  applyFilters();
+}
+
+async function loadNexFeatured() {
+  try {
+    const res = await fetch(NEX_WELL_KNOWN);
+    const data = await res.json();
+    const grid = document.getElementById('nex-grid');
+    const endpoints = data.paid_endpoints || {};
+    grid.innerHTML = Object.entries(endpoints).map(([path, info]) => `
+      <div class="service-card" data-url="${data.wallet}" data-path="${path}">
+        <div class="service-name">${path}</div>
+        <div class="service-desc">${info.description || ''}</div>
+        <div class="service-tags">
+          <span class="tag featured">⭐ NEX</span>
+          <span class="tag price">$${info.price_usdc} USDC</span>
+          <span class="tag network">${data.network}</span>
+          <span class="tag">${info.model.split(':')[0]}</span>
+        </div>
+        <div class="service-footer">
+          <div class="service-meta">${info.kind}</div>
+          <div style="color: #4ade80; font-size: 12px;">→ call</div>
+        </div>
+      </div>
+    `).join('');
+    grid.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const path = card.dataset.path;
+        const url = `https://charm-preparing-avon-ips.trycloudflare.com${path}`;
+        showModal({
+          name: `NEX ${path}`,
+          url,
+          description: 'NEX Agent Co. — Frontier open-weight LLMs on Apple M5 Max 128GB',
+          accepts: [{
+            scheme: 'exact',
+            network: data.network,
+            asset: 'USDC',
+            payTo: data.wallet,
+            maxTimeoutSeconds: 60,
+          }],
+        });
+      });
+    });
+  } catch (e) {
+    document.getElementById('nex-grid').innerHTML = '<div style="color: #71717a;">Failed to load NEX services</div>';
+  }
+}
+
+function renderNexFeatured() {
+  loadNexFeatured();
+}
+
+function applyFilters() {
+  const query = document.getElementById('search').value.toLowerCase();
+  const network = document.getElementById('filter-network').value;
+  const sort = document.getElementById('filter-sort').value;
+
+  filteredServices = allServices.filter(s => {
+    if (network && !JSON.stringify(s).toLowerCase().includes(network)) return false;
+    if (query) {
+      const hay = JSON.stringify(s).toLowerCase();
+      if (!hay.includes(query)) return false;
+    }
+    return true;
+  });
+
+  if (sort === 'new') {
+    filteredServices.sort((a, b) => new Date(b.lastUpdated || 0) - new Date(a.lastUpdated || 0));
+  } else if (sort === 'price-asc' || sort === 'price-desc') {
+    filteredServices.sort((a, b) => {
+      const aPrice = parseFloat((a.accepts?.[0]?.displayAmount || a.accepts?.[0]?.extra?.displayAmount || '0').replace(/[^0-9.]/g, '')) || 0;
+      const bPrice = parseFloat((b.accepts?.[0]?.displayAmount || b.accepts?.[0]?.extra?.displayAmount || '0').replace(/[^0-9.]/g, '')) || 0;
+      return sort === 'price-asc' ? aPrice - bPrice : bPrice - aPrice;
+    });
+  }
+
+  render();
+}
+
+function render() {
+  const grid = document.getElementById('service-grid');
+  if (filteredServices.length === 0) {
+    grid.innerHTML = '<div class="loading" style="grid-column: 1/-1;">No services match your filters.</div>';
+    return;
+  }
+  grid.innerHTML = filteredServices.slice(0, 200).map(s => {
+    const accept = s.accepts?.[0] || {};
+    const price = accept.displayAmount || accept.extra?.displayAmount || '?';
+    const network = accept.network || '?';
+    const isNex = (s.resource || '').includes('charm-preparing-avon-ips');
+    const tags = s.tags || [];
+    return `
+      <div class="service-card" data-resource="${s.resource}">
+        <div class="service-name">${(s.description || s.resource || '').slice(0, 80)}${(s.description || '').length > 80 ? '…' : ''}</div>
+        <div class="service-desc">${(s.description || '').slice(0, 200) || s.resource}</div>
+        <div class="service-tags">
+          ${isNex ? '<span class="tag featured">⭐ NEX</span>' : ''}
+          <span class="tag price">${price} USDC</span>
+          <span class="tag network">${network}</span>
+          ${tags.slice(0, 3).map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+        <div class="service-footer">
+          <div class="service-meta">${(s.type || 'http')} · ${(s.method || 'GET')}</div>
+          <div style="color: #4ade80; font-size: 12px;">→ view</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('results-count').textContent = `${filteredServices.length.toLocaleString()} of ${allServices.length.toLocaleString()} services shown (showing first 200)`;
+  
+  // Click to show modal
+  grid.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const resource = card.dataset.resource;
+      const s = allServices.find(x => x.resource === resource);
+      if (s) showModal(s);
+    });
+  });
+}
+
+function showModal(s) {
+  const accept = s.accepts?.[0] || {};
+  const network = accept.network || '?';
+  const price = accept.displayAmount || accept.extra?.displayAmount || '?';
+  const payTo = accept.payTo || '?';
+  const isNex = (s.resource || '').includes('charm-preparing-avon-ips');
+  
+  const curlExample = `curl -X ${s.method || 'GET'} "${s.resource}" \\
+  -H "X-PAYMENT: <your-signed-payment>"`;
+  
+  document.getElementById('modal-content').innerHTML = `
+    <h2>${isNex ? '⭐ ' : ''}${s.description || s.resource}</h2>
+    <div style="color: #a1a1aa; font-size: 14px; margin-bottom: 16px; word-break: break-all;">${s.resource}</div>
+    <div class="service-tags" style="margin-bottom: 20px;">
+      <span class="tag price">${price} USDC</span>
+      <span class="tag network">${network}</span>
+      <span class="tag">${s.type || 'http'}</span>
+      ${(s.tags || []).slice(0, 5).map(t => `<span class="tag">${t}</span>`).join('')}
+    </div>
+    <h3 style="color: #fff; font-size: 14px; margin-bottom: 8px;">Payment Requirements</h3>
+    <pre>${JSON.stringify(accept, null, 2)}</pre>
+    <h3 style="color: #fff; font-size: 14px; margin: 20px 0 8px;">How to call</h3>
+    <pre>${curlExample}</pre>
+    <h3 style="color: #fff; font-size: 14px; margin: 20px 0 8px;">Full Service Definition</h3>
+    <pre>${JSON.stringify(s, null, 2)}</pre>
+    <div style="margin-top: 24px;">
+      <a href="${s.resource}" class="btn" target="_blank">Open resource</a>
+      <a href="https://x402.org" class="btn secondary" style="margin-left: 12px;" target="_blank">x402 docs</a>
+    </div>
+  `;
+  document.getElementById('modal').classList.add('open');
+}
+
+document.getElementById('modal-close').addEventListener('click', () => {
+  document.getElementById('modal').classList.remove('open');
+});
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open');
+});
+
+document.getElementById('search').addEventListener('input', debounce(applyFilters, 300));
+document.getElementById('filter-network').addEventListener('change', applyFilters);
+document.getElementById('filter-sort').addEventListener('change', applyFilters);
+
+function debounce(fn, ms) {
+  let t;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+
+// Init
+loadAllServices().catch(e => {
+  document.getElementById('service-grid').innerHTML = `<div class="loading" style="grid-column: 1/-1; color: #ef4444;">Error: ${e.message}</div>`;
+});
+</script>
+
+</body>
+</html>
