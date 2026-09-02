@@ -496,7 +496,7 @@
     <div>
       <a href="https://github.com/NEXAITECHAU" target="_blank">GitHub</a> ·
       <a href="https://glama.ai/mcp/servers/NEXAITECHAU/nex-agent-co-mcp" target="_blank">MCP</a> ·
-      <a href="https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json" target="_blank">x402.json</a>
+      <a href="https://scsi-ids-fin-farmers.trycloudflare.com/.well-known/x402.json" target="_blank">x402.json</a>
     </div>
   </div>
 </footer>
@@ -510,7 +510,7 @@
 
 <script>
 const DISCOVERY_API = 'https://facilitator.payai.network/discovery/resources';
-const NEX_WELL_KNOWN = 'https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json';
+const NEX_WELL_KNOWN = 'https://scsi-ids-fin-farmers.trycloudflare.com/.well-known/x402.json';
 const PAGE_SIZE = 100;
 
 let allServices = [];
@@ -563,7 +563,7 @@ async function loadNexFeatured() {
     grid.querySelectorAll('.service-card').forEach(card => {
       card.addEventListener('click', () => {
         const path = card.dataset.path;
-        const url = `https://charm-preparing-avon-ips.trycloudflare.com${path}`;
+        const url = `https://scsi-ids-fin-farmers.trycloudflare.com${path}`;
         showModal({
           name: `NEX ${path}`,
           url,

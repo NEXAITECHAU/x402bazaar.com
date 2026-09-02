@@ -53,7 +53,7 @@ This is a discovery site. It drives traffic to x402 services and showcases NEX A
 ## Data sources
 
 - PayAI discovery: `https://facilitator.payai.network/discovery/resources` (27,949 services)
-- NEX well-known: `https://charm-preparing-avon-ips.trycloudflare.com/.well-known/x402.json`
+- NEX well-known: `https://scsi-ids-fin-farmers.trycloudflare.com/.well-known/x402.json`
 
 ## License
 
